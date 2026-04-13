@@ -1,0 +1,10 @@
+name: personal-finance-ai-mcp
+description: "MEOK AI Labs — Built by MEOK AI Labs | https://meok.ai"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/personal-finance-ai-mcp
+license: MIT
+categories: [Finance, Personal Finance]
+tags: [personal-finance, budgeting, savings, investment-tracking, financial-wellness]
+runtime: python
+entrypoint: server.py

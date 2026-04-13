@@ -1,0 +1,24 @@
+{
+  "name": "personal-finance-ai-mcp",
+  "description": "MEOK AI Labs \u2014 Built by MEOK AI Labs | https://meok.ai",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/personal-finance-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "track_budget",
+    "calculate_savings",
+    "plan_debt_payoff",
+    "analyze_investment",
+    "estimate_tax"
+  ],
+  "categories": [
+    "Finance",
+    "Personal Finance"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
