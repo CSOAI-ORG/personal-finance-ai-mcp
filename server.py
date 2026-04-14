@@ -14,10 +14,7 @@ from typing import Optional
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP(
-    "personal-finance-ai",
-    version="1.0.0",
-    description="Personal finance AI - budgets, savings, debt payoff, investments, tax estimation",
-)
+    "personal-finance-ai")
 
 # ---------------------------------------------------------------------------
 # Rate limiting
@@ -67,8 +64,7 @@ _STANDARD_DEDUCTION = {"single": 14600, "married": 29200, "head_of_household": 2
 @mcp.tool()
 def track_budget(
     monthly_income: float,
-    expenses: list[dict],
-) -> dict:
+    expenses: list[dict]) -> dict:
     """Analyze spending against recommended budget allocations.
 
     Args:
@@ -127,8 +123,7 @@ def calculate_savings(
     current_savings: float = 0,
     monthly_contribution: float = 500,
     annual_return_pct: float = 5.0,
-    inflation_pct: float = 2.5,
-) -> dict:
+    inflation_pct: float = 2.5) -> dict:
     """Calculate time to reach a savings goal with compound interest.
 
     Args:
@@ -187,8 +182,7 @@ def calculate_savings(
 def plan_debt_payoff(
     debts: list[dict],
     extra_monthly_payment: float = 0,
-    strategy: str = "avalanche",
-) -> dict:
+    strategy: str = "avalanche") -> dict:
     """Create a debt payoff plan using avalanche or snowball method.
 
     Args:
@@ -280,8 +274,7 @@ def analyze_investment(
     initial_investment: float,
     monthly_addition: float = 0,
     years: int = 10,
-    allocation: Optional[dict] = None,
-) -> dict:
+    allocation: Optional[dict] = None) -> dict:
     """Analyze investment growth with asset allocation modeling.
 
     Args:
@@ -371,8 +364,7 @@ def estimate_tax(
     filing_status: str = "single",
     deductions: Optional[dict] = None,
     state: Optional[str] = None,
-    self_employment_income: float = 0,
-) -> dict:
+    self_employment_income: float = 0) -> dict:
     """Estimate US federal income tax liability.
 
     Args:
