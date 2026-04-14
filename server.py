@@ -6,6 +6,11 @@ Budget tracking, savings calculations, debt payoff planning,
 investment analysis, and tax estimation.
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import time
 import math
 from datetime import datetime, timezone
@@ -64,7 +69,7 @@ _STANDARD_DEDUCTION = {"single": 14600, "married": 29200, "head_of_household": 2
 @mcp.tool()
 def track_budget(
     monthly_income: float,
-    expenses: list[dict]) -> dict:
+    expenses: list[dict], api_key: str = "") -> dict:
     """Analyze spending against recommended budget allocations.
 
     Args:
@@ -73,6 +78,10 @@ def track_budget(
                  Categories: housing, transportation, food, utilities, healthcare,
                  savings, personal, entertainment, debt_payments.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -123,7 +132,7 @@ def calculate_savings(
     current_savings: float = 0,
     monthly_contribution: float = 500,
     annual_return_pct: float = 5.0,
-    inflation_pct: float = 2.5) -> dict:
+    inflation_pct: float = 2.5, api_key: str = "") -> dict:
     """Calculate time to reach a savings goal with compound interest.
 
     Args:
@@ -133,6 +142,10 @@ def calculate_savings(
         annual_return_pct: Expected annual return percentage.
         inflation_pct: Expected annual inflation percentage.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -182,7 +195,7 @@ def calculate_savings(
 def plan_debt_payoff(
     debts: list[dict],
     extra_monthly_payment: float = 0,
-    strategy: str = "avalanche") -> dict:
+    strategy: str = "avalanche", api_key: str = "") -> dict:
     """Create a debt payoff plan using avalanche or snowball method.
 
     Args:
@@ -191,6 +204,10 @@ def plan_debt_payoff(
         extra_monthly_payment: Additional monthly amount above minimums.
         strategy: avalanche (highest interest first) | snowball (smallest balance first).
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -274,7 +291,7 @@ def analyze_investment(
     initial_investment: float,
     monthly_addition: float = 0,
     years: int = 10,
-    allocation: Optional[dict] = None) -> dict:
+    allocation: Optional[dict] = None, api_key: str = "") -> dict:
     """Analyze investment growth with asset allocation modeling.
 
     Args:
@@ -284,6 +301,10 @@ def analyze_investment(
         allocation: Asset allocation percentages. Example: {"stocks": 60, "bonds": 30, "cash": 10}.
                    Defaults to age-based if omitted.
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 
@@ -364,7 +385,7 @@ def estimate_tax(
     filing_status: str = "single",
     deductions: Optional[dict] = None,
     state: Optional[str] = None,
-    self_employment_income: float = 0) -> dict:
+    self_employment_income: float = 0, api_key: str = "") -> dict:
     """Estimate US federal income tax liability.
 
     Args:
@@ -375,6 +396,10 @@ def estimate_tax(
         state: State code for state tax estimate (simplified).
         self_employment_income: Self-employment income (subject to SE tax).
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
 

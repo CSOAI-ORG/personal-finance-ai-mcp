@@ -1,24 +1,134 @@
 {
   "name": "personal-finance-ai-mcp",
-  "description": "MEOK AI Labs \u2014 Built by MEOK AI Labs | https://meok.ai",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/personal-finance-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "**Financial Planning Intelligence**",
+  "version": "1.0.0",
   "tools": [
-    "track_budget",
-    "calculate_savings",
-    "plan_debt_payoff",
-    "analyze_investment",
-    "estimate_tax"
-  ],
-  "categories": [
-    "Finance",
-    "Personal Finance"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "track_budget",
+      "description": "Analyze spending against recommended budget allocations.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "monthly_income": {
+            "type": "number"
+          },
+          "expenses": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": [
+          "monthly_income",
+          "expenses"
+        ]
+      }
+    },
+    {
+      "name": "calculate_savings",
+      "description": "Calculate time to reach a savings goal with compound interest.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "target_amount": {
+            "type": "number"
+          },
+          "current_savings": {
+            "type": "number"
+          },
+          "monthly_contribution": {
+            "type": "number"
+          },
+          "annual_return_pct": {
+            "type": "number"
+          },
+          "inflation_pct": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "target_amount"
+        ]
+      }
+    },
+    {
+      "name": "plan_debt_payoff",
+      "description": "Create a debt payoff plan using avalanche or snowball method.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "debts": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "extra_monthly_payment": {
+            "type": "number"
+          },
+          "strategy": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "debts"
+        ]
+      }
+    },
+    {
+      "name": "analyze_investment",
+      "description": "Analyze investment growth with asset allocation modeling.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "initial_investment": {
+            "type": "number"
+          },
+          "monthly_addition": {
+            "type": "number"
+          },
+          "years": {
+            "type": "integer"
+          },
+          "allocation": {
+            "type": "object",
+            "nullable": true
+          }
+        },
+        "required": [
+          "initial_investment"
+        ]
+      }
+    },
+    {
+      "name": "estimate_tax",
+      "description": "Estimate US federal income tax liability.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "gross_income": {
+            "type": "number"
+          },
+          "filing_status": {
+            "type": "string"
+          },
+          "deductions": {
+            "type": "object",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "self_employment_income": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "gross_income"
+        ]
+      }
+    }
+  ]
 }

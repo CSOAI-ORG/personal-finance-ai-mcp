@@ -1,10 +1,76 @@
 name: personal-finance-ai-mcp
-description: "MEOK AI Labs — Built by MEOK AI Labs | https://meok.ai"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/personal-finance-ai-mcp
-license: MIT
-categories: [Finance, Personal Finance]
-tags: [personal-finance, budgeting, savings, investment-tracking, financial-wellness]
-runtime: python
-entrypoint: server.py
+description: '**Financial Planning Intelligence**'
+version: 1.0.0
+tools:
+- name: track_budget
+  description: Analyze spending against recommended budget allocations.
+  parameters:
+  - name: monthly_income
+    type: number
+    required: true
+  - name: expenses
+    type: array
+    required: true
+- name: calculate_savings
+  description: Calculate time to reach a savings goal with compound interest.
+  parameters:
+  - name: target_amount
+    type: number
+    required: true
+  - name: current_savings
+    type: number
+    required: false
+  - name: monthly_contribution
+    type: number
+    required: false
+  - name: annual_return_pct
+    type: number
+    required: false
+  - name: inflation_pct
+    type: number
+    required: false
+- name: plan_debt_payoff
+  description: Create a debt payoff plan using avalanche or snowball method.
+  parameters:
+  - name: debts
+    type: array
+    required: true
+  - name: extra_monthly_payment
+    type: number
+    required: false
+  - name: strategy
+    type: string
+    required: false
+- name: analyze_investment
+  description: Analyze investment growth with asset allocation modeling.
+  parameters:
+  - name: initial_investment
+    type: number
+    required: true
+  - name: monthly_addition
+    type: number
+    required: false
+  - name: years
+    type: integer
+    required: false
+  - name: allocation
+    type: object
+    required: false
+- name: estimate_tax
+  description: Estimate US federal income tax liability.
+  parameters:
+  - name: gross_income
+    type: number
+    required: true
+  - name: filing_status
+    type: string
+    required: false
+  - name: deductions
+    type: object
+    required: false
+  - name: state
+    type: string
+    required: false
+  - name: self_employment_income
+    type: number
+    required: false
