@@ -22,3 +22,6 @@ Repository = "https://github.com/CSOAI-ORG/personal-finance-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 only-include = ["server.py"]
+
+[project.scripts]
+personal_finance_ai_mcp = "server:main"

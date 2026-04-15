@@ -1,0 +1,10 @@
+{
+  "name": "personal-finance-ai-mcp",
+  "description": "MEOK AI Labs \u2014 personal-finance-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/personal-finance-ai-mcp",
+  "license": "MIT",
+  "runtime": "python",
+  "entryPoint": "mcp-wrapper.py"
+}
