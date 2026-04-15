@@ -1,5 +1,6 @@
 name: personal-finance-ai-mcp
-description: "\x01"
+description: Personal Finance Ai automation via MCP. Includes track budget, calculate
+  savings, plan debt payoff. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: track_budget
