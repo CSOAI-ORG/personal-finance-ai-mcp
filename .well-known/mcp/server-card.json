@@ -1,0 +1,57 @@
+{
+  "name": "personal-finance-ai",
+  "description": "\u0001",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/personal-finance-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "track_budget",
+      "description": "Analyze spending against recommended budget allocations."
+    },
+    {
+      "name": "calculate_savings",
+      "description": "Calculate time to reach a savings goal with compound interest."
+    },
+    {
+      "name": "plan_debt_payoff",
+      "description": "Create a debt payoff plan using avalanche or snowball method."
+    },
+    {
+      "name": "analyze_investment",
+      "description": "Analyze investment growth with asset allocation modeling."
+    },
+    {
+      "name": "estimate_tax",
+      "description": "Estimate US federal income tax liability."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Finance & Fintech"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
