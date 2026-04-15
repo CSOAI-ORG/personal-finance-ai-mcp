@@ -1,5 +1,5 @@
 name: personal-finance-ai-mcp
-description: '**Financial Planning Intelligence**'
+description: MEOK AI Labs MCP Server
 version: 1.0.0
 tools:
 - name: track_budget

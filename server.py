@@ -18,8 +18,7 @@ from typing import Optional
 
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP(
-    "personal-finance-ai")
+mcp = FastMCP("personal-finance-ai", instructions="")
 
 # ---------------------------------------------------------------------------
 # Rate limiting
