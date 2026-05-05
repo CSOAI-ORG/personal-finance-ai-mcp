@@ -1,60 +1,38 @@
-# Personal Finance AI MCP Server
+<div align="center">
 
-**Financial Planning Intelligence**
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/personal-finance-ai-mcp)](https://github.com/CSOAI-ORG/personal-finance-ai-mcp/stargazers)
 
-Built by [MEOK AI Labs](https://meok.ai)
+# upersonalU financeU aiU mcp
+
+****Financial Planning Intelligence****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/personal-finance-ai-mcp)](https://www.npmjs.com/package/@meok-ai/personal-finance-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/personal-finance-ai-mcp/issues)
+
+</div>
 
 ---
 
-An MCP server for personal financial planning. Track budgets against recommended allocations, calculate compound savings growth, plan debt payoff with avalanche or snowball strategies, analyze investment portfolios, and estimate US federal taxes.
-
-## Tools
-
-| Tool | Description |
-|------|-------------|
-| `track_budget` | Analyze spending against recommended 50/30/20 budget allocations |
-| `calculate_savings` | Calculate time to savings goal with compound interest and inflation |
-| `plan_debt_payoff` | Create avalanche or snowball debt payoff plans with interest savings |
-| `analyze_investment` | Model investment growth with asset allocation and risk scenarios |
-| `estimate_tax` | Estimate US federal income tax with bracket breakdown and FICA |
-
-## Quick Start
+## Installation
 
 ```bash
 pip install personal-finance-ai-mcp
+# or
+npm install -g @meok-ai/personal-finance-ai-mcp
 ```
 
-### Claude Desktop
+## Quick Start
 
-```json
-{
-  "mcpServers": {
-    "personal-finance-ai": {
-      "command": "python",
-      "args": ["-m", "server"],
-      "cwd": "/path/to/personal-finance-ai-mcp"
-    }
-  }
-}
-```
+See the project repository for full documentation and examples.
 
-### Direct Usage
+## Enterprise Support
 
-```bash
-python server.py
-```
-
-## Rate Limits
-
-| Tier | Requests/Hour |
-|------|--------------|
-| Free | 60 |
-| Pro | 5,000 |
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT - see [LICENSE](LICENSE)
-
----
-
-*Part of the MEOK AI Labs MCP Marketplace*
+MIT © [CSOAI](https://csoai.org)
