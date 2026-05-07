@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "personal-finance-ai-mcp"
-version = "1.0.3"
+version = "1.0.4"
 readme = "README.md"
 description = "Personal Finance Ai automation via MCP. Includes track budget, calculate savings, plan debt payoff. By MEOK AI Labs."
 license = {file = "LICENSE"}
