@@ -1,3 +1,5 @@
+[![personal-finance-ai-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/personal-finance-ai-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/personal-finance-ai-mcp)
+
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/personal-finance-ai-mcp)](https://github.com/CSOAI-ORG/personal-finance-ai-mcp/stargazers)
