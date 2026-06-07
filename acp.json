@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "personal-finance-ai-mcp",
+    "description": "Personal Finance Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "personal-finance-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "track_budget",
+      "calculate_savings",
+      "plan_debt_payoff",
+      "analyze_investment",
+      "estimate_tax"
+    ]
+  }
+}

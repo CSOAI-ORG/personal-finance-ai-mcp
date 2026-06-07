@@ -1,0 +1,68 @@
+{
+  "name": "personal-finance-ai-mcp",
+  "description": "Personal Finance Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/personal-finance-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "track_budget",
+      "name": "Track Budget",
+      "description": "track_budget via personal-finance-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "calculate_savings",
+      "name": "Calculate Savings",
+      "description": "calculate_savings via personal-finance-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "plan_debt_payoff",
+      "name": "Plan Debt Payoff",
+      "description": "plan_debt_payoff via personal-finance-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "analyze_investment",
+      "name": "Analyze Investment",
+      "description": "analyze_investment via personal-finance-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "estimate_tax",
+      "name": "Estimate Tax",
+      "description": "estimate_tax via personal-finance-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
