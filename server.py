@@ -8,7 +8,6 @@ investment analysis, and tax estimation.
 
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import time
@@ -108,7 +107,7 @@ def track_budget(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
@@ -201,7 +200,7 @@ def calculate_savings(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
@@ -277,7 +276,7 @@ def plan_debt_payoff(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
@@ -389,7 +388,7 @@ def analyze_investment(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
@@ -499,7 +498,7 @@ def estimate_tax(
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
 
     if not _check_rate_limit():
         return {"error": "Rate limit exceeded. Upgrade to pro tier."}
@@ -577,5 +576,8 @@ def estimate_tax(
     }
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

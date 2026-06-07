@@ -1,0 +1,36 @@
+# personal-finance-ai-mcp
+# **Personal Finance AI MCP Server - Financial Planning Intelligence**
+
+## Install
+```bash
+pip install personal-finance-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `track_budget`
+Analyze spending against recommended budget allocations.
+
+### `calculate_savings`
+Calculate time to reach a savings goal with compound interest.
+
+### `plan_debt_payoff`
+Create a debt payoff plan using avalanche or snowball method.
+
+### `analyze_investment`
+Analyze investment growth with asset allocation modeling.
+
+### `estimate_tax`
+Estimate US federal income tax liability.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

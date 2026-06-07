@@ -1,0 +1,28 @@
+{
+  "name": "personal-finance-ai-mcp",
+  "title": "Personal Finance Ai Mcp",
+  "description": "Personal Finance Ai automation via MCP. Includes track budget, calculate savings, plan debt payoff. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "track_budget"
+    },
+    {
+      "name": "calculate_savings"
+    },
+    {
+      "name": "plan_debt_payoff"
+    },
+    {
+      "name": "analyze_investment"
+    },
+    {
+      "name": "estimate_tax"
+    }
+  ]
+}

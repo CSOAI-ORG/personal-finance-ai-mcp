@@ -1,0 +1,9 @@
+# personal-finance-ai-mcp - Auto-trigger Rules
+
+When the user asks about personal finance, use personal-finance-ai-mcp tools: track_budget, calculate_savings, plan_debt_payoff, analyze_investment, estimate_tax
+
+**Personal Finance AI MCP Server - Financial Planning Intelligence**
+
+Install: `pip install personal-finance-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.
