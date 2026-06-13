@@ -1,0 +1,112 @@
+{
+  "name": "Personal Finance Ai Mcp",
+  "version": "1.0.6",
+  "url": "https://mcp.meok.ai/personal-finance-ai-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "Personal Finance Ai automation via MCP. Includes track budget, calculate savings, plan debt payoff. By MEOK AI Labs.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "track_budget",
+      "name": "Track Budget",
+      "description": "Track Budget — a tool of the personal-finance-ai-mcp MCP.",
+      "tags": [
+        "finance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "calculate_savings",
+      "name": "Calculate Savings",
+      "description": "Calculate Savings — a tool of the personal-finance-ai-mcp MCP.",
+      "tags": [
+        "finance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "plan_debt_payoff",
+      "name": "Plan Debt Payoff",
+      "description": "Plan Debt Payoff — a tool of the personal-finance-ai-mcp MCP.",
+      "tags": [
+        "finance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "analyze_investment",
+      "name": "Analyze Investment",
+      "description": "Analyze Investment — a tool of the personal-finance-ai-mcp MCP.",
+      "tags": [
+        "finance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "estimate_tax",
+      "name": "Estimate Tax",
+      "description": "Estimate Tax — a tool of the personal-finance-ai-mcp MCP.",
+      "tags": [
+        "finance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "personal-finance-ai-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
