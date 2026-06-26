@@ -1,4 +1,6 @@
 """
+Buy Pro: https://www.csoai.org/checkout
+
 Personal Finance AI MCP Server - Financial Planning Intelligence
 Built by MEOK AI Labs | https://meok.ai
 
